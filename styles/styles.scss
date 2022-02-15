@@ -1,1 +1,18 @@
 @import "./mixins";
+
+header {
+  width: 100%;
+  position: relative;
+
+  .header__bkg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  nav {
+    display: flex;
+    padding: 1.75rem 1.5rem;
+  }
+}
