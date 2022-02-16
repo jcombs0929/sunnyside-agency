@@ -283,4 +283,19 @@ header .hero-text h1 {
 }
 
 /* ===== TESTIMONIALS END ===== */
+/* ===== PROJECTS START ===== */
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+}
+
+.projects .photo {
+  width: 100%;
+}
+
+/* ===== PROJECTS END ===== */
 /*# sourceMappingURL=styles.css.map */
