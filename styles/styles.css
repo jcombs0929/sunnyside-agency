@@ -150,6 +150,10 @@ header .hero-text h1 {
       grid-template-rows: auto;
 }
 
+.services .service {
+  text-align: center;
+}
+
 .services .service img {
   width: 100%;
   height: auto;
@@ -157,7 +161,6 @@ header .hero-text h1 {
 
 .services .service__text {
   padding: 3.5rem 3rem;
-  text-align: center;
 }
 
 .services .service__text h2 {
@@ -206,5 +209,37 @@ header .hero-text h1 {
   background-color: #fe7867;
 }
 
+.services .service__skill {
+  position: relative;
+  width: 100%;
+}
+
+.services .service .skill-text {
+  position: absolute;
+  bottom: 8%;
+  margin: 2rem;
+  color: #25564b;
+  line-height: 1.6;
+}
+
+.services .service .skill-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.services .service .skill-text p {
+  font-size: 1.1rem;
+}
+
+.services .service .skill-text__graphic-design {
+  color: #25564b;
+}
+
+.services .service .skill-text__photography {
+  color: #19536b;
+}
+
 /* ===== SERVICES END ===== */
+/* ===== TESTIMONIALS START ===== */
+/* ===== TESTIMONIALS END ===== */
 /*# sourceMappingURL=styles.css.map */

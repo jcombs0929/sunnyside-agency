@@ -145,6 +145,7 @@ header {
   grid-template-rows: auto;
 
   .service {
+    text-align: center;
     img {
       width: 100%;
       height: auto;
@@ -152,7 +153,6 @@ header {
 
     &__text {
       padding: 3.5rem 3rem;
-      text-align: center;
 
       h2 {
         font-size: 2rem;
@@ -199,6 +199,37 @@ header {
         background-color: rgba($soft-red, 1);
       }
     }
+
+    &__skill {
+      position: relative;
+      width: 100%;
+    }
+    .skill-text {
+      position: absolute;
+      bottom: 8%;
+      margin: 2rem;
+      color: $dark-desaturated-cyan;
+      line-height: 1.6;
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      &__graphic-design {
+        color: $dark-desaturated-cyan;
+      }
+
+      &__photography {
+        color: $dark-blue;
+      }
+    }
   }
 }
 /* ===== SERVICES END ===== */
+/* ===== TESTIMONIALS START ===== */
+/* ===== TESTIMONIALS END ===== */
