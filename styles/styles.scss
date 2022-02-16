@@ -1,18 +1,136 @@
 @import "./mixins";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow";
+}
+
+h1,
+h2,
+h3,
+h4,
+.btn {
+  font-family: "Fraunces";
+}
+
+/* ===== HEADER START ===== */
+
 header {
+  height: min-content;
   width: 100%;
   position: relative;
 
-  .header__bkg {
-    width: 100%;
+  .header-container {
     position: absolute;
     top: 0;
-    z-index: -1;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
   }
 
-  nav {
+  .header__bkg {
+    width: 100%;
+
+    img {
+      width: 100%;
+      max-width: 400;
+      height: auto;
+    }
+  }
+
+  .header-nav {
     display: flex;
-    padding: 1.75rem 1.5rem;
+    padding: 0.75rem 0;
+    justify-content: space-between;
+
+    .mobile-menu {
+      background-color: red;
+      margin: 2rem;
+      position: absolute;
+      top: 5.5rem;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: none;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: 30px solid $white;
+        border-left: 30px solid transparent;
+        position: absolute;
+        right: 0;
+        top: -30px;
+      }
+
+      ul {
+        background-color: $white;
+        padding: 2.5rem 3rem 3rem;
+        width: 100%;
+        text-align: center;
+
+        li {
+          list-style: none;
+          font-size: 1.4rem;
+
+          &:last-child {
+            margin-top: 1.5rem;
+          }
+
+          a {
+            display: inline-block;
+            padding: 1.2rem;
+            text-decoration: none;
+            color: $dark-grayish-blue-02;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              cursor: pointer;
+              color: $dark-grayish-blue-01;
+            }
+
+            &.btn {
+              background-color: $yellow;
+              padding: 1.25rem 2rem;
+              color: $dark-desaturated-blue;
+              border-radius: 2rem;
+              text-transform: uppercase;
+              font-size: 1.2rem;
+
+              &:hover {
+                background-color: rgba($yellow, 0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hero-text {
+    color: $white;
+    text-align: center;
+    padding: 0 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
   }
 }
+
+/* ===== HEADER END ===== */

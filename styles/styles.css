@@ -1,19 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow";
+}
+
+h1,
+h2,
+h3,
+h4,
+.btn {
+  font-family: "Fraunces";
+}
+
+/* ===== HEADER START ===== */
 header {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   width: 100%;
   position: relative;
 }
 
-header .header__bkg {
-  width: 100%;
+header .header-container {
   position: absolute;
   top: 0;
-  z-index: -1;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
 }
 
-header nav {
+header .header__bkg {
+  width: 100%;
+}
+
+header .header__bkg img {
+  width: 100%;
+  max-width: 400;
+  height: auto;
+}
+
+header .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.75rem 1.5rem;
+  padding: 0.75rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
+header .header-nav .mobile-menu {
+  background-color: red;
+  margin: 2rem;
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+}
+
+header .header-nav .mobile-menu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid white;
+  border-left: 30px solid transparent;
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+
+header .header-nav .mobile-menu ul {
+  background-color: white;
+  padding: 2.5rem 3rem 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+header .header-nav .mobile-menu ul li {
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+header .header-nav .mobile-menu ul li:last-child {
+  margin-top: 1.5rem;
+}
+
+header .header-nav .mobile-menu ul li a {
+  display: inline-block;
+  padding: 1.2rem;
+  text-decoration: none;
+  color: #818498;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .header-nav .mobile-menu ul li a:hover {
+  cursor: pointer;
+  color: #5a636c;
+}
+
+header .header-nav .mobile-menu ul li a.btn {
+  background-color: #fad400;
+  padding: 1.25rem 2rem;
+  color: #23303e;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+header .header-nav .mobile-menu ul li a.btn:hover {
+  background-color: rgba(250, 212, 0, 0.7);
+}
+
+header .hero-text {
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .hero-text h1 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* ===== HEADER END ===== */
 /*# sourceMappingURL=styles.css.map */

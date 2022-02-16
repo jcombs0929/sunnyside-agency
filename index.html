@@ -17,13 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="./styles/styles.css" />
 
     <title>Frontend Mentor | Sunnyside agency landing page</title>
@@ -31,33 +24,34 @@
 
   <body>
     <header>
-      <nav class="header-nav">
-        <div class="logo">
-          <img src="./images/logo.svg" alt="sunnyside agency" class="logo" />
-        </div>
+      <div class="header-container">
+        <nav class="header-nav">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="sunnyside agency" class="logo" />
+          </div>
 
-        <div class="mobile-menu-btn">
-          <img src="./images/icon-hamburger.svg" alt="Menu" />
-        </div>
+          <div class="mobile-menu-btn" onclick="onMenuToggle()">
+            <img src="./images/icon-hamburger.svg" alt="Menu" />
+          </div>
 
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#" class="btn">Contact</a></li>
-        </ul>
-      </nav>
-
+          <div class="mobile-menu">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#" class="btn">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <div class="hero-text">
         <h1>We are creatives</h1>
         <img src="./images/icon-arrow-down.svg" alt="arrow down" />
       </div>
 
-      <img
-        src="./images/mobile/image-header.jpg"
-        alt="Header Image"
-        class="header__bkg"
-      />
+      <figure class="header__bkg">
+        <img src="./images/mobile/image-header.jpg" alt="Header Image" />
+      </figure>
     </header>
 
     <main>
@@ -210,5 +204,7 @@
         >.
       </div>
     </footer>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
