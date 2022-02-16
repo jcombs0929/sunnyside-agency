@@ -13,7 +13,8 @@ h1,
 h2,
 h3,
 h4,
-.btn {
+.btn,
+.service__link {
   font-family: "Fraunces";
 }
 
@@ -139,4 +140,71 @@ header .hero-text h1 {
 }
 
 /* ===== HEADER END ===== */
+/* ===== SERVICES START ===== */
+.services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.services .service img {
+  width: 100%;
+  height: auto;
+}
+
+.services .service__text {
+  padding: 3.5rem 3rem;
+  text-align: center;
+}
+
+.services .service__text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.services .service__text p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #818498;
+  margin-bottom: 2rem;
+}
+
+.services .service__link {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #23303e;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.services .service__link::after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(250, 212, 0, 0.4);
+  position: absolute;
+  top: 21px;
+  left: 0;
+  z-index: -1;
+}
+
+.services .service__link:hover::after {
+  background-color: #fad400;
+}
+
+.services .service__link--red::after {
+  background-color: rgba(254, 120, 103, 0.4);
+}
+
+.services .service__link--red:hover::after {
+  background-color: #fe7867;
+}
+
+/* ===== SERVICES END ===== */
 /*# sourceMappingURL=styles.css.map */
