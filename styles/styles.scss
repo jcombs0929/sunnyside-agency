@@ -14,6 +14,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 .btn,
 .service__link {
   font-family: "Fraunces";
@@ -52,7 +53,6 @@ header {
     // MOBILE MENU
 
     .mobile-menu {
-      background-color: red;
       margin: 2rem;
       position: absolute;
       top: 5.5rem;
@@ -230,6 +230,50 @@ header {
     }
   }
 }
+
 /* ===== SERVICES END ===== */
+
 /* ===== TESTIMONIALS START ===== */
+
+.testimonials {
+  background-color: $white;
+  text-align: center;
+  padding: 4rem 2.5rem;
+
+  h4 {
+    font-size: 1rem;
+    color: $grayish-blue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  .testimonial {
+    margin: 4.5rem 0;
+    line-height: 1.6;
+
+    &__photo {
+      width: 4rem;
+      border-radius: 50%;
+      margin-bottom: 1.6rem;
+    }
+
+    &__name {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+      color: $grayish-blue;
+    }
+
+    &__text {
+      font-size: 1.1rem;
+      color: $dark-grayish-blue-02;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 /* ===== TESTIMONIALS END ===== */
