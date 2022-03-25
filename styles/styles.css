@@ -237,17 +237,43 @@ header .hero-text h1 {
 .services {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+}
+
+@media (min-width: 900px) {
+  .services {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
 }
 
 .services .service {
   text-align: center;
 }
 
-.services .service img {
+@media (min-width: 900px) {
+  .services .service {
+    text-align: left;
+    place-self: center stretch;
+  }
+  .services .service:first-child {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+  }
+  .services .service:nth-child(2) {
+    -ms-grid-row: 1;
+    grid-row: 1 / 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+  }
+}
+
+.services .service .service__image--mobile {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -255,8 +281,34 @@ header .hero-text h1 {
   display: flex;
 }
 
+@media (min-width: 900px) {
+  .services .service .service__image--mobile {
+    display: none;
+  }
+}
+
+.services .service .service__image--desktop {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .services .service .service__image--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .services .service__text {
   padding: 3.5rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .services .service__text {
+    padding: 20%;
+  }
 }
 
 .services .service__text h2 {
@@ -312,10 +364,11 @@ header .hero-text h1 {
 
 .services .service .skill-text {
   position: absolute;
-  bottom: 8%;
+  bottom: 5%;
   margin: 2rem;
   color: #25564b;
   line-height: 1.6;
+  text-align: center;
 }
 
 .services .service .skill-text h3 {
@@ -335,12 +388,69 @@ header .hero-text h1 {
   color: #19536b;
 }
 
+@media (min-width: 1000px) {
+  .services .service .skill-text {
+    top: 54%;
+    left: 15%;
+    right: 15%;
+  }
+}
+
+@media (min-width: 900px) {
+  .services .service .skill-text h3 {
+    font-size: 1.7rem;
+  }
+  .services .service .skill-text p {
+    font-size: 1rem;
+  }
+}
+
+.services .service .graphic-design--mobile,
+.services .service .photography--mobile {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .services .service .graphic-design--mobile,
+  .services .service .photography--mobile {
+    display: none;
+  }
+}
+
+.services .service .graphic-design--desktop,
+.services .service .photography--desktop {
+  display: none;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .services .service .graphic-design--desktop,
+  .services .service .photography--desktop {
+    display: block;
+  }
+}
+
 /* ===== SERVICES END ===== */
 /* ===== TESTIMONIALS START ===== */
 .testimonials {
   background-color: white;
   text-align: center;
   padding: 4rem 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .testimonials {
+    padding: 8rem 6rem;
+  }
+  .testimonials-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 }
 
 .testimonials h4 {
@@ -351,7 +461,7 @@ header .hero-text h1 {
 }
 
 .testimonials .testimonial {
-  margin: 4.5rem 0;
+  margin: 4.5rem 0 0;
   line-height: 1.6;
 }
 
@@ -378,15 +488,30 @@ header .hero-text h1 {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 900px) {
+  .testimonials .testimonial__text {
+    margin-bottom: 3rem;
+  }
+}
+
 /* ===== TESTIMONIALS END ===== */
 /* ===== PROJECTS START ===== */
 .projects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (auto)[2];
       grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+  .projects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
 }
 
 .projects .photo {
@@ -416,6 +541,13 @@ footer nav {
       justify-content: space-around;
   padding: 2rem;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  footer nav {
+    margin: 0 auto 3rem;
+    max-width: 400px;
+  }
 }
 
 footer nav li a {
