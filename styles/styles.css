@@ -212,23 +212,21 @@ header .hero-text h1 {
 
 @media (min-width: 900px) {
   .services {
-    -ms-grid-columns: (50%)[3];
-        grid-template-columns: repeat(3, 50%);
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
   }
 }
 
 .services .service {
-  text-align: center;
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .services .service {
-    text-align: left;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (50vw)[2];
+        grid-template-columns: repeat(2, 50vw);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     place-self: center stretch;
@@ -280,7 +278,8 @@ header .hero-text h1 {
 }
 
 .services .service__text {
-  padding: 16% 8%;
+  text-align: center;
+  padding: 10%;
 }
 
 .services .service__text h2 {
@@ -295,9 +294,16 @@ header .hero-text h1 {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .services .service__text {
-    padding: 1vmin;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .services .service__text {
+    text-align: left;
+    padding: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -323,7 +329,14 @@ header .hero-text h1 {
 
 @media (min-width: 900px) {
   .services .service__text {
-    padding: 18%;
+    padding: 12%;
+  }
+  .services .service__text h2 {
+    font-size: 3vw;
+  }
+  .services .service__text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
 
@@ -543,7 +556,7 @@ header .hero-text h1 {
       grid-template-rows: repeat(2, auto);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .projects {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);

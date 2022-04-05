@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
 
-  @media (min-width: $tablet-01) {
+  @media (min-width: $tablet-02) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
