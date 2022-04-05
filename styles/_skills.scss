@@ -1,0 +1,82 @@
+.skills {
+  @media (min-width: $tablet-02) {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: auto;
+    // place-self: center stretch;
+  }
+  .skill {
+    position: relative;
+  }
+  .skill__text {
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+    right: 12%;
+    color: $dark-desaturated-cyan;
+    line-height: 1.6;
+    text-align: center;
+
+    h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1.3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: $tablet-01) {
+      bottom: 10%;
+      left: 15%;
+      right: 15%;
+      line-height: 1.4;
+    }
+
+    @media (min-width: $tablet-02) {
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 1350px) {
+      bottom: 12%;
+      max-width: 450px;
+      margin: 0 auto;
+      h3 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .skill.graphic-design {
+    color: $dark-desaturated-cyan;
+  }
+
+  .skill.photography {
+    color: $dark-blue;
+  }
+  .gd-mobile,
+  .p-mobile {
+    width: 100%;
+    @media (min-width: $tablet-02) {
+      display: none;
+    }
+  }
+  .gd-desktop,
+  .p-desktop {
+    display: none;
+    width: 100%;
+    @media (min-width: $tablet-02) {
+      display: block;
+      width: 50vw;
+      height: 100%;
+    }
+  }
+}

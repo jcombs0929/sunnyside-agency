@@ -1,0 +1,14 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  @media (min-width: $tablet-01) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .photo {
+    width: 100%;
+  }
+}

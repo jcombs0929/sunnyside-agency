@@ -1,0 +1,131 @@
+.services {
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: auto;
+
+  @media (min-width: $tablet-02) {
+    grid-template-columns: repeat(3, 50%);
+  }
+
+  .service {
+    text-align: center;
+    display: block;
+
+    @media (min-width: $tablet-01) {
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      place-self: center stretch;
+
+      &:first-child {
+        grid-row: 1 / 1;
+        .service__image {
+          grid-row: 1/1;
+          grid-column: 2 / span 1;
+        }
+        .service__text {
+          grid-column: 1 / 2;
+        }
+      }
+    }
+
+    &__image--mobile {
+      width: 100%;
+      height: auto;
+      display: flex;
+
+      @media (min-width: $tablet-02) {
+        display: none;
+      }
+    }
+
+    &__image--desktop {
+      width: 100%;
+      height: auto;
+      display: none;
+
+      @media (min-width: $tablet-02) {
+        display: flex;
+      }
+    }
+
+    &__text {
+      padding: 16% 8%;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        line-height: 1.7;
+        font-size: 1.2rem;
+        color: $dark-grayish-blue-02;
+        margin-bottom: 2rem;
+      }
+
+      @media (min-width: $tablet-02) {
+        padding: 1vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h2 {
+          font-size: 3vw;
+        }
+        p {
+          font-size: 1.2rem;
+          line-height: 1.5;
+        }
+      }
+
+      @media (min-width: $tablet-02) {
+        padding: 18%;
+      }
+
+      @media (min-width: 1500px) {
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.3rem;
+          line-height: 1.7;
+        }
+      }
+    }
+
+    &__link {
+      padding: 0.5rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $dark-desaturated-blue;
+      position: relative;
+      letter-spacing: 1px;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 10px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: rgba($yellow, 0.4);
+        position: absolute;
+        top: 21px;
+        left: 0;
+        z-index: -1;
+      }
+
+      &:hover::after {
+        background-color: rgba($yellow, 1);
+      }
+
+      &--red::after {
+        background-color: rgba($soft-red, 0.4);
+      }
+
+      &--red:hover::after {
+        background-color: rgba($soft-red, 1);
+      }
+    }
+  }
+}
