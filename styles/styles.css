@@ -628,6 +628,10 @@ footer .attribution a {
   color: #25564b;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;

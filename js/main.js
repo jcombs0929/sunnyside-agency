@@ -11,9 +11,12 @@ window.onresize = reportWindowSize;
 function reportWindowSize() {
   let width = window.innerWidth;
   if (width >= 768) {
-    toggleResponsive();
+    mobileMenuBtn.style.display = "none";
+    navMenu.style.display = "block";
+    heroText.style.display = "block";
   } else {
     mobileMenuBtn.style.display = "block";
+    navMenu.style.display = "none";
   }
 }
 
@@ -26,12 +29,4 @@ function onMenuToggle() {
     navMenu.style.display = "block";
     heroText.style.display = "none";
   }
-}
-
-function toggleResponsive() {
-  mobileMenuBtn.style.display = "none";
-  // heroImageMobile.style.display = "none";
-  // heroImageDesktop.style.display = "block";
-
-  // navMenu.style.display = "inline-block";
 }
