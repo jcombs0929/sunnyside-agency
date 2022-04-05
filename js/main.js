@@ -1,8 +1,6 @@
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const navMenu = document.querySelector(".menu");
 const heroText = document.querySelector(".hero-text");
-const heroImageDesktop = document.querySelector(".header__bkg--desktop");
-const heroImageMobile = document.querySelector(".header__bkg--mobile");
 
 let menu = false;
 
